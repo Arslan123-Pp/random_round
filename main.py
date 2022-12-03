@@ -1,15 +1,18 @@
 import sys
 
-from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow
+
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
 from PyQt5.QtGui import QPainter, QColor
 from random import randrange
 
 
-class MyWidget(QMainWindow):
+class MyWidget(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setGeometry(300, 300, 500, 400)
+        self.result = QPushButton('Рисовать', self)
+        self.result.move(10, 200)
+        self.result.resize(100, 100)
         self.result.clicked.connect(self.paint)
         self.do_paint = False
 
@@ -26,9 +29,9 @@ class MyWidget(QMainWindow):
         self.repaint()
 
     def draw_flag(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
+        qp.setBrush(QColor(randrange(0, 255), randrange(0, 255), randrange(0, 255)))
         size = randrange(30, 200)
-        qp.drawEllipse(300, 100, size, size)
+        qp.drawEllipse(200, 100, size, size)
 
 
 if __name__ == '__main__':
