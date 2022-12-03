@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>528</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="result">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>150</y>
+     <width>111</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Нарисовать</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup_binary"/>
+  <buttongroup name="buttonGroup_digits"/>
+ </buttongroups>
+</ui>
